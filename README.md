@@ -32,7 +32,9 @@ SLEEP SECONDS = Seconds to sleep between each interval number of attempts.
 
 ## Demo
 
+![smb_rotate1](https://user-images.githubusercontent.com/19710178/167995380-822b6f12-ce59-4d04-b658-f56db3065f24.png)
 
+![smb_rotate2](https://user-images.githubusercontent.com/19710178/167995514-15a2aaa4-8532-4c66-a8ef-08e4064e9cb8.png)
 ### Credits 
 
 * Gustavo Segundo - ByteNull%00
