@@ -23,7 +23,7 @@ export DEBIAN_FRONTEND=noninteractive
 ███████║██║ ╚═╝ ██║██████╔╝███████╗██║  ██║╚██████╔╝   ██║   ██║  ██║   ██║   ███████╗
 ╚══════╝╚═╝     ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝   ╚═╝   ╚══════╝
                                                         		v1.0 codead by ByteNull%00
-                                                     		    Gustavo Segundo | gasso2do@gmail.com 
+                                                     		        Gustavo Segundo | gasso2do@gmail.com 
 
 
 	EOF
