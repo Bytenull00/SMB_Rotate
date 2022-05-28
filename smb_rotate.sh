@@ -91,7 +91,7 @@ fi
 
 filecontent=( `cat $USER_FILE `)
 fileips=( `cat $IP_FILE `)
-
+touch $TMP_FILE_RESULTS
 for user in "${filecontent[@]}"; do
 
 	rpcclient -U "${DOMAIN}\\${user}%${PASS}" ${fileips[$counter2]} -c 'getusername' > $TMP_FILE
