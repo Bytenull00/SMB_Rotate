@@ -98,18 +98,18 @@ for user in "${filecontent[@]}"; do
 
 		if [ "Account Name" == "$(cat $TMP_FILE | grep -io 'Account Name')" ]; then
 
-			echo -e "${blueColour}SMB${endColour}\t\t ${fileips[$counter2]}\t 445\t\t ${greenColour}[+]${endColour} ${DOMAIN}\\${user}:${PASS}"
-			echo -e "${greenColour}[+]${endColour} ${DOMAIN}\\${user}:${PASS}" >> $TMP_FILE_RESULTS
+			echo -e "${blueColour}SMB${endColour}\t\t ${fileips[$counter2]}\t 445\t\t ${greenColour}[+]${endColour} ${DOMAIN}/${user}:${PASS}"
+			echo -e "${greenColour}[+]${endColour} ${DOMAIN}/${user}:${PASS}" >> $TMP_FILE_RESULTS
 
 			rpcclient -U "${DOMAIN}\\${user}%${PASS}" ${fileips[$counter2]} -c "netsharegetinfo 'ADMIN\$" > $TMP_FILE
 
 			if [ "netname" == "$(cat $TMP_FILE | grep -io 'netname')" ]; then
 
-				echo -e "${blueColour}SMB${endColour}\t\t ${fileips[$counter2]}\t 445\t\t ${greenColour}[+]${endColour} ${DOMAIN}\\${user}:${PASS} ${yellowColour}(Administrator!)${endColour}"
-				echo -e "${greenColour}[+]${endColour} ${DOMAIN}\\${user}:${PASS} ${yellowColour}(Administrator!)${endColour}" >> $TMP_FILE_RESULTS
+				echo -e "${blueColour}SMB${endColour}\t\t ${fileips[$counter2]}\t 445\t\t ${greenColour}[+]${endColour} ${DOMAIN}/${user}:${PASS} ${yellowColour}(Administrator!)${endColour}"
+				echo -e "${greenColour}[+]${endColour} ${DOMAIN}/${user}:${PASS} ${yellowColour}(Administrator!)${endColour}" >> $TMP_FILE_RESULTS
 			fi	
 		else	
-			echo -e "${blueColour}SMB${endColour}\t\t ${fileips[$counter2]}\t 445\t\t ${redColour}[-]${endColour} ${DOMAIN}\\${user}:${PASS}"
+			echo -e "${blueColour}SMB${endColour}\t\t ${fileips[$counter2]}\t 445\t\t ${redColour}[-]${endColour} ${DOMAIN}/${user}:${PASS}"
 		fi
 
 	counter=$((counter+1))
